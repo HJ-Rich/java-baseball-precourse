@@ -1,47 +1,47 @@
 package baseball.model;
 
+import java.util.List;
+
 import baseball.vo.ResultBall;
 import baseball.vo.UserBall;
 
-import java.util.List;
-
 public class Answer {
 
-    private List<Integer> answer;
-    private boolean isTrying = true;
+	private List<Integer> answer;
+	private boolean isTrying = true;
 
-    public Answer(List<Integer> newQuiz) {
-        this.answer = newQuiz;
-    }
+	public Answer(List<Integer> newQuiz) {
+		this.answer = newQuiz;
+	}
 
-    public boolean isTrying() {
-        return isTrying;
-    }
+	public boolean isTrying() {
+		return isTrying;
+	}
 
-    public ResultBall getResultBallByUserBall(UserBall userBall) {
-        List<Integer> userInputList = userBall.getUserInputList();
-        int strike = 0;
-        int ball = 0;
+	public ResultBall getResultBallByUserBall(UserBall userBall) {
+		List<Integer> userInputList = userBall.getUserInputList();
+		int strike = 0;
+		int ball = 0;
 
-        for (int i = 0; i < answer.size(); i++) {
-            Integer answerNumber = answer.get(i);
-            Integer userInputNumber = userInputList.get(i);
+		for (int i = 0; i < answer.size(); i++) {
+			Integer answerNumber = answer.get(i);
+			Integer userInputNumber = userInputList.get(i);
 
-            if (answerNumber == userInputNumber) {
-                strike++;
-            } else if (answer.contains(userInputNumber)) {
-                ball++;
-            }
-        }
+			if (answerNumber == userInputNumber) {
+				strike++;
+			} else if (answer.contains(userInputNumber)) {
+				ball++;
+			}
+		}
 
-        setIsTryingByStrike(strike);
-        return new ResultBall(strike, ball);
-    }
+		setIsTryingByStrike(strike);
+		return new ResultBall(strike, ball);
+	}
 
-    private void setIsTryingByStrike(int strike) {
-        if (strike == 3) {
-            isTrying = false;
-        }
-    }
+	private void setIsTryingByStrike(int strike) {
+		if (strike == 3) {
+			isTrying = false;
+		}
+	}
 
 }
