@@ -1,6 +1,42 @@
-# 미션 - 숫자 야구 게임
+<p align="center">
+    <img src="./woowacourse.png" alt="우아한테크코스" width="250px">
+</p>
 
-## 🚀 기능 목록
+# 프리코스 1주차 미션 - 숫자 야구 게임
+
+---
+
+![Generic badge](https://img.shields.io/badge/precourse-week1-green.svg)
+![Generic badge](https://img.shields.io/badge/test-2_passed-blue.svg)
+![Generic badge](https://img.shields.io/badge/version-1.0.1-brightgreen.svg)
+
+> 우아한테크코스 4기 1주차 미션, 숫자 야구 게임을 구현한 저장소입니다.
+
+<br>
+
+<img src="./operation.gif">
+
+# 목차
+
+- [시작하기](#시작하기)
+- [기능 목록](#기능-목록)
+    - [문제 출제](#문제-출제)
+    - [문제 풀기](#문제-풀기)
+    - [정답 이후 처리](#정답-이후-처리)
+
+## 시작하기
+
+---
+
+레포지토리를 Clone 하고 IDE에서 애플리케이션을 실행합니다.
+
+```git
+git clone -b as --single-branch https://github.com/hj-rich/java-baseball-precourse
+```
+
+---
+
+## 기능 목록
 
 ### 문제 출제
 
